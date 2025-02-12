@@ -9,14 +9,21 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'), // Путь для выходного файла сборки
   },
 
-  module: {
-    rules: [
-      {
-        test: /\.css$/, // Регулярное выражение для обработки файлов с расширением .css
-        use: ['style-loader', 'css-loader'], // Загрузчики, используемые для обработки CSS-файлов
-      },
-    ],
-  },
+  module.exports = {
+    module: {
+      rules: [
+        {
+          test: /\.css$/, // Если файл .css
+          use: ['style-loader', 'css-loader'], // Обрабатываем его через эти загрузчики
+        },
+        {
+          test: /\.(png|jpe?g|gif|svg)$/i, // Если файл изображение
+          type: 'asset/resource', // Webpack сохранит его в папке dist
+        },
+      ],
+    },
+  };
+  
   
   plugins: [
     new HtmlWebpackPlugin({
