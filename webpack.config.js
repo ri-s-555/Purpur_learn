@@ -64,7 +64,7 @@ module.exports = (env, argv) => {
       }),
       new CopyWebpackPlugin({
         patterns: [
-          { from: 'public/image', to: 'image' }, // Копирование изображений
+          { from: 'public/image', to: 'img' }, // Копирование изображений
         ],
       }),
     ],
