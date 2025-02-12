@@ -1,16 +1,15 @@
 
 export function creatCard ({color, price, name, }) {
-    const elem = document.createElement( 'div')
-    elem. innerHTML = `
-
-            <div class="sellers-product__card">
+    const elem = document.createElement ("div")
+    elem.innerHTML = `
+    <div class="sellers-product__card">
                 <div class="sellers-product__card-pick ${color}">
                     <div class="sellers-product__card-pick_img">
                         <img class="sellers-product__card-pick_img-product" src="./image/Top_Picks_2.png"
                             alt="Top_Picks_2_Boat kerz 234">
                     </div>
                     <div class="sellers-product__card-pick_descr">
-                        <div class="sellers-product__card-pick_descr__name">Boat kerz 234</div>
+                        <div class="sellers-product__card-pick_descr__name">${name}</div>
                         <div class="sellers-product__card-pick_descr__reviews">
                             <div class="sellers-product__card-pick_descr__reviews-svg">
                                 <svg width="17" height="16" viewBox="0 0 17 16" fill="none"
@@ -45,13 +44,16 @@ export function creatCard ({color, price, name, }) {
                                 </svg>
 
                             </div>
-                            <div class="sellers-product__card-pick_descr__reviews-text">75 Reviews</div>
+                            <div class="sellers-product__card-pick_descr__reviews-text">${review}s</div>
                         </div>
-                        <div class="sellers-product__card-pick_descr__price">$40</div>
+                        <div class="sellers-product__card-pick_descr__price">${price}</div>
                     </div>
                 </div>
                 <button class="sellers-product__card-button">Add to cart</button>
             </div>
-`
-return elem
+    `
+    return elem
 }
+
+
+
