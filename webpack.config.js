@@ -9,11 +9,11 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'), // Путь для выходного файла сборки
   },
 
-  module.exports = {
+  exports: {
     module: {
       rules: [
         {
-          test: /\.css$/, // Если файл .css
+          test: /\.css$/, // Если файл .css,
           use: ['style-loader', 'css-loader'], // Обрабатываем его через эти загрузчики
         },
         {
@@ -22,7 +22,7 @@ module.exports = {
         },
       ],
     },
-  };
+  },
   
   
   plugins: [
